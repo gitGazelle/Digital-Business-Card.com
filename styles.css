@@ -1,37 +1,53 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body, html {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
 }
 
 .business-card {
-    background-color: #fff;
-    border-radius: 10px;
+    background-color: rgba(228, 219, 219, 0.9);
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 100%;
+    max-width: 600px;
+    height: 90vh;
+    margin: auto;
     text-align: center;
     overflow: hidden;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-header {
-    background-color: #ef72d8;
+    background-color: #965ace;
     color: #fff;
     padding: 20px;
 }
 
 .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     margin-bottom: 10px;
 }
 
 .card-body {
-    padding: 20px;
+    padding: 19px;
 }
 
 .contact-icons {
@@ -41,8 +57,8 @@ body {
 }
 
 .contact-icon img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     transition: transform 0.2s;
 }
 
@@ -51,7 +67,7 @@ body {
 }
 
 .card-footer {
-    padding: 0;
+    padding: 5;
 }
 
 .social-section {
@@ -59,12 +75,12 @@ body {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    color: #fff;
+    color: #0a0808;
 }
 
 .social-icon {
-    width: 20px;
-    height: 20px;
+    width: 27px;
+    height: 25px;
     margin-right: 10px;
 }
 
@@ -72,12 +88,12 @@ body {
     background-color: #25D366;
 }
 
-.facebook {
-    background-color: #FFD700;
+.instagram {
+    background-color: #61a4e2;
 }
 
 .linkedin {
-    background-color: #fcb3ff;
+    background-color: #d6cbd2;
 }
 
 .social-section a {
@@ -87,4 +103,20 @@ body {
 
 .social-section a:hover {
     text-decoration: underline;
+}
+
+.save-button {
+    background-color: #9951d4;
+    color: #f3e8e8;
+    border: none;
+    padding: 11px 30px;
+    margin: 12.5px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.2em;
+}
+
+.save-button:hover {
+    background-color: #005bb5;
 }
